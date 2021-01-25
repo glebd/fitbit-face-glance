@@ -104,6 +104,7 @@
   <text id="hour02" class="hLabel">2</text>
   <text id="hour03" class="hLabel">3</text>
   <text id="hour04" class="hLabel">4</text>
+  <text id="hour05" class="hLabel">5</text>
   <text id="hour06" class="hLabel">6</text>
   <text id="hour09" class="hLabel">9</text>
   <!-- Hour hand -->
