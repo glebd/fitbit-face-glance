@@ -103,6 +103,6 @@
     <use href="#h_hand" fill="white" />
   </g>
   <g id="seconds" transform="translate(50%,50%)">
-    <line x1="0" y1="8%" x2="0" y2="-48%+3" stroke-width="2" fill="red" />
+    <line x1="0" y1="8%" x2="0" y2="-48%+3" stroke-width="3" fill="red" />
   </g>
 </svg>
