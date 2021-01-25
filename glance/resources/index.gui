@@ -1,3 +1,38 @@
-<svg>
-  <rect id="background" />
+<svg viewport-fill="black">
+  <defs>
+    <symbol id="h_tick">
+      <g id="container">
+        <line x1="0" y1="-46%" x2="0" y2="-48%+3" stroke-width="3" fill="inherit" />
+        <line x1="0" y1="-47%" x2="0" y2="-46%+3" stroke-width="3" fill="inherit" />
+      </g>
+    </symbol>
+    <symbol id="h_tick_quarter">
+      <g id="container">
+        <use href="#h_tick" fill="inherit" />
+        <use href="#h_tick" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(30)" />
+        </use>
+        <use href="#h_tick" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(60)" />
+        </use>
+      </g>
+    </symbol>
+    <symbol id="h_ticks">
+      <use href="#h_tick_quarter" fill="inherit" />
+      <use href="#h_tick_quarter" fill="inherit">
+        <set href="container" attributeName="transform" to="rotate(90)" />
+      </use>
+      <use href="#h_tick_quarter" fill="inherit">
+        <set href="container" attributeName="transform" to="rotate(180)" />
+      </use>
+      <use href="#h_tick_quarter" fill="inherit">
+        <set href="container" attributeName="transform" to="rotate(270)" />
+      </use>
+    </symbol>
+  </defs>
+  <circle fill="#0b4058" id="outer_circle" cx="150" cy="150" r="145" />
+  <circle fill="#000000" id="inner_circle" cx="150" cy="150" r="90" />
+  <g transform="translate(50%,50%)">
+    <use href="#h_ticks" fill="white" />
+  </g>
 </svg>

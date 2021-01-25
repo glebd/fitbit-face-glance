@@ -24,18 +24,23 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="176.38353"
+     inkscape:cx="103.40001"
      inkscape:cy="162.3306"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
-     showgrid="false"
+     showgrid="true"
      units="px"
      inkscape:window-width="1252"
      inkscape:window-height="978"
-     inkscape:window-x="375"
+     inkscape:window-x="668"
      inkscape:window-y="25"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="0"
+     objecttolerance="20">
+    <inkscape:grid
+       type="xygrid"
+       id="grid36" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -51,5 +56,18 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1" />
+     id="layer1">
+    <circle
+       style="fill:#0b4058;fill-rule:evenodd;fill-opacity:1"
+       id="outer_circle"
+       cx="150"
+       cy="150"
+       r="145" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke-width:1.20068"
+       id="inner_circle"
+       cx="150"
+       cy="150"
+       r="90" />
+  </g>
 </svg>
