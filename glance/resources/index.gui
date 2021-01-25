@@ -101,6 +101,7 @@
   <!-- Hour labels -->
   <text id="hour12" class="hLabel">12</text>
   <text id="hour01" class="hLabel">1</text>
+  <text id="hour02" class="hLabel">2</text>
   <text id="hour03" class="hLabel">3</text>
   <text id="hour06" class="hLabel">6</text>
   <text id="hour09" class="hLabel">9</text>
