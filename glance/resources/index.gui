@@ -79,6 +79,6 @@
   <circle fill="#000000" id="inner_circle" cx="150" cy="150" r="90" />
   <g transform="translate(50%,50%)">
     <use href="#h_ticks" fill="white" />
-    <use href="#m_ticks" fill="white" />
+    <use href="#m_ticks" fill="white" opacity="0.75" />
   </g>
 </svg>
