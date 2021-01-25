@@ -84,16 +84,10 @@
       <line x1="0" y1="-18" x2="0" y2="-46%+4" stroke-width="5" fill="black" />
       </symbol>
     <symbol id="h_hand">
-      <line x1="0" y1="-25%" x2="0" y2="-29%" stroke-width="5" fill="black" />
-<!--
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="5" fill="black" />
-      <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="2" fill="inherit" />
-      <line x1="0" y1="-25%" x2="0" y2="-29%" stroke-width="5" fill="inherit" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="5" fill="inherit" />
-      <line x1="0" y1="-18%" x2="0" y2="-22%" stroke-width="3" fill="black" />
-      <line x1="0" y1="-18%" x2="0" y2="-10%" stroke-width="3" fill="black" />
- -->
-     </symbol>
+      <line x1="0" y1="-16" x2="0" y2="-29%+2" stroke-width="9" fill="inherit" />
+      <line x1="0" y1="-4" x2="0" y2="-18" stroke-width="3" fill="inherit" />
+      <line x1="0" y1="-18" x2="0" y2="-29%+4" stroke-width="5" fill="black" />
+    </symbol>
   </defs>
   <circle fill="#0b4058" id="outer_circle" cx="150" cy="150" r="145" />
   <circle fill="#000000" id="inner_circle" cx="150" cy="150" r="90" />
