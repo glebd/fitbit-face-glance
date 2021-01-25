@@ -2,8 +2,8 @@
   <defs>
     <symbol id="h_tick">
       <g id="container">
-        <line x1="0" y1="-46%" x2="0" y2="-48%+3" stroke-width="3" fill="inherit" />
-        <line x1="0" y1="-47%" x2="0" y2="-46%+3" stroke-width="3" fill="inherit" />
+        <line x1="0" y1="-45%" x2="0" y2="-48%+3" stroke-width="3" fill="inherit" />
+        <line x1="0" y1="-47%" x2="0" y2="-45%+3" stroke-width="3" fill="inherit" />
       </g>
     </symbol>
     <symbol id="h_tick_quarter">
@@ -75,9 +75,25 @@
       </use>
     </symbol>
     <symbol id="axis">
-      <circle fill="white" cx="0" cy="0" r="4" />
-      <circle fill="black" cx="0" cy="0" r="2" />
+      <circle fill="white" cx="0" cy="0" r="6" />
+      <circle fill="black" cx="0" cy="0" r="3" />
     </symbol>
+    <symbol id="m_hand">
+      <line x1="0" y1="-16" x2="0" y2="-46%+2" stroke-width="9" fill="inherit" />
+      <line x1="0" y1="-4" x2="0" y2="-18" stroke-width="3" fill="inherit" />
+      <line x1="0" y1="-18" x2="0" y2="-46%+4" stroke-width="5" fill="black" />
+      </symbol>
+    <symbol id="h_hand">
+      <line x1="0" y1="-25%" x2="0" y2="-29%" stroke-width="5" fill="black" />
+<!--
+      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="5" fill="black" />
+      <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="2" fill="inherit" />
+      <line x1="0" y1="-25%" x2="0" y2="-29%" stroke-width="5" fill="inherit" />
+      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="5" fill="inherit" />
+      <line x1="0" y1="-18%" x2="0" y2="-22%" stroke-width="3" fill="black" />
+      <line x1="0" y1="-18%" x2="0" y2="-10%" stroke-width="3" fill="black" />
+ -->
+     </symbol>
   </defs>
   <circle fill="#0b4058" id="outer_circle" cx="150" cy="150" r="145" />
   <circle fill="#000000" id="inner_circle" cx="150" cy="150" r="90" />
@@ -85,5 +101,14 @@
     <use href="#h_ticks" fill="white" />
     <use href="#m_ticks" fill="white" opacity="0.75" />
     <use href="#axis" />
+  </g>
+  <g id="minutes" transform="translate(50%,50%)" fill="white">
+    <use href="#m_hand" fill="inherit" />
+  </g>
+  <g id="hours" transform="translate(50%,50%)">
+    <use href="#h_hand" fill="white" />
+  </g>
+  <g id="seconds" transform="translate(50%,50%)">
+    <line x1="0" y1="8%" x2="0" y2="-50%+3" stroke-width="1" fill="cyan" />
   </g>
 </svg>
