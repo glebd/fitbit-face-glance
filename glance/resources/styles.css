@@ -15,29 +15,30 @@ line {
 }
 
 .hLabel {
-  font-family: Colfax;
+  font-family: Seville;
   font-weight: regular;
-  font-size: 24;
+  font-size: 20;
+  font-weight: bold;
   fill: white;
   text-anchor: middle;
 }
 
 #hour12 {
   x: 50%;
-  y: 14%;
+  y: 13%;
 }
 
 #hour03 {
-  x: 88%+2;
-  y: 53%;
+  x: 89%;
+  y: 52%+1;
 }
 
 #hour06 {
   x: 50%;
-  y: 92%-2;
+  y: 92%-1;
 }
 
 #hour09 {
-  x: 12%-2;
-  y: 53%-1;
+  x: 11%-1;
+  y: 52%;
 }
