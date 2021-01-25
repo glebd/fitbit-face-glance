@@ -29,10 +29,56 @@
         <set href="container" attributeName="transform" to="rotate(270)" />
       </use>
     </symbol>
+    <symbol id="m_tick">
+      <g id="container">
+        <line x1="0" y1="-46%" x2="0" y2="-48%+2" stroke-width="1" fill="inherit" />
+        <line x1="0" y1="-46%" x2="0" y2="-46%+1" stroke-width="1" fill="inherit" />
+      </g>
+    </symbol>
+    <symbol id="m_tick_5">
+      <g id="container">
+        <use href="#m_tick" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(6)" />
+        </use>
+        <use href="#m_tick" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(12)" />
+        </use>
+        <use href="#m_tick" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(18)" />
+        </use>
+        <use href="#m_tick" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(24)" />
+        </use>
+      </g>
+    </symbol>
+    <symbol id="m_tick_quarter">
+      <g id="container">
+        <use href="#m_tick_5" fill="inherit" />
+        <use href="#m_tick_5" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(30)" />
+        </use>
+        <use href="#m_tick_5" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(60)" />
+        </use>
+      </g>
+    </symbol>
+    <symbol id="m_ticks">
+      <use href="#m_tick_quarter" fill="inherit" />
+      <use href="#m_tick_quarter" fill="inherit">
+        <set href="container" attributeName="transform" to="rotate(90)" />
+      </use>
+      <use href="#m_tick_quarter" fill="inherit">
+        <set href="container" attributeName="transform" to="rotate(180)" />
+      </use>
+      <use href="#m_tick_quarter" fill="inherit">
+        <set href="container" attributeName="transform" to="rotate(270)" />
+      </use>
+    </symbol>
   </defs>
   <circle fill="#0b4058" id="outer_circle" cx="150" cy="150" r="145" />
   <circle fill="#000000" id="inner_circle" cx="150" cy="150" r="90" />
   <g transform="translate(50%,50%)">
     <use href="#h_ticks" fill="white" />
+    <use href="#m_ticks" fill="white" />
   </g>
 </svg>
