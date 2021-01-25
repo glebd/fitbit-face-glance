@@ -97,11 +97,11 @@
     <use href="#axis" />
   </g>
   <text id="hour12" class="hLabel">12</text>
-  <g id="minutes" transform="translate(50%,50%)" fill="white">
-    <use href="#m_hand" fill="inherit" />
-  </g>
   <g id="hours" transform="translate(50%,50%)">
     <use href="#h_hand" fill="white" />
+  </g>
+  <g id="minutes" transform="translate(50%,50%)" fill="white">
+    <use href="#m_hand" fill="inherit" />
   </g>
   <g id="seconds" transform="translate(50%,50%)">
     <line x1="0" y1="8%" x2="0" y2="-48%+3" stroke-width="3" fill="red" />
