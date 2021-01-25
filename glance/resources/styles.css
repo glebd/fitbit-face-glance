@@ -1,15 +1,28 @@
 line {
   stroke-linecap: round;
 }
+
 .defaultText {
-  font-size: 32;
-  font-family: System-Regular;
+  font-size: 24;
+  font-family: Colfax;
   font-weight: regular;
-  text-length: 32;
 }
 
 #background {
   width: 100%;
   height: 100%;
   fill: white;
+}
+
+.hLabel {
+  font-family: Colfax;
+  font-weight: regular;
+  font-size: 24;
+  fill: white;
+  text-anchor: middle;
+}
+
+#hour12 {
+  x: 50%;
+  y: 14%;
 }

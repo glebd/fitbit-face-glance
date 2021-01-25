@@ -96,6 +96,7 @@
     <use href="#m_ticks" fill="white" opacity="0.75" />
     <use href="#axis" />
   </g>
+  <text id="hour12" class="hLabel">12</text>
   <g id="minutes" transform="translate(50%,50%)" fill="white">
     <use href="#m_hand" fill="inherit" />
   </g>
