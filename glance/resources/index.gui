@@ -76,7 +76,7 @@
     </symbol>
     <symbol id="axis">
       <circle fill="white" cx="0" cy="0" r="6" />
-      <circle fill="black" cx="0" cy="0" r="3" />
+      <circle fill="red" cx="0" cy="0" r="4" />
     </symbol>
     <symbol id="m_hand">
       <line x1="0" y1="-16" x2="0" y2="-46%+2" stroke-width="9" fill="inherit" />
@@ -103,6 +103,6 @@
     <use href="#h_hand" fill="white" />
   </g>
   <g id="seconds" transform="translate(50%,50%)">
-    <line x1="0" y1="8%" x2="0" y2="-50%+3" stroke-width="1" fill="cyan" />
+    <line x1="0" y1="8%" x2="0" y2="-48%+3" stroke-width="2" fill="red" />
   </g>
 </svg>
