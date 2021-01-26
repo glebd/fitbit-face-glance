@@ -128,4 +128,8 @@
   <g id="seconds" transform="translate(50%,50%)">
     <line x1="0" y1="8%" x2="0" y2="-48%+3" stroke-width="3" fill="red" />
   </g>
+  <!-- Battery -->
+  <g id="compl_battery" transform="translate(9%,42%)">
+    <text id="battery_percent"></text>
+  </g>
 </svg>

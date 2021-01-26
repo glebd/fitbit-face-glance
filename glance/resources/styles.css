@@ -30,3 +30,11 @@ line {
 
 #bg_outer {fill: #10334b;}
 #bg_inner {fill: "black";}
+
+#battery_percent {
+  font-family: Fabrikat-Black;
+  font-size: 14;
+  fill: green;
+  text-anchor: middle;
+  text-length: 4;
+}
