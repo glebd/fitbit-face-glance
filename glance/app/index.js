@@ -1,9 +1,13 @@
 import clock from "clock";
 import document from "document";
+import {display} from "display";
+import {me} from "appbit";
 
 let myHours = $("hours");
 let myMins = $("minutes");
 let mySecs = $("seconds");
+let minTicks = $("m_ticks");
+let bg = $("bg");
 
 function $(s) {
   return document.getElementById(s);
@@ -21,6 +25,30 @@ function onTick(now) {
   mySecs.groupTransform.rotate.angle = secs*6;
 }
 
-clock.granularity = "seconds";
+function setAOD(on) {
+  if(on) {
+    clock.granularity = "minutes";
+    mySecs.style.display = "none";
+    minTicks.style.display = "none";
+    bg.style.display = "none";
+  } else {
+    clock.granularity = "seconds";
+    mySecs.style.display = "inline";
+    minTicks.style.display = "inline";
+    bg.style.display = "inline";
+  }
+}
+
+if(display.aodAvailable && me.permissions.granted("access_aod")) {
+  display.aodAllowed = true;
+  display.onchange = () => {
+    setAOD(display.aodActive);
+    if(!display.aodActive) onTick();
+  };
+  setAOD(display.aodActive);
+} else {
+  clock.granularity = "seconds";
+}
+
 clock.ontick = onTick;
 onTick();
