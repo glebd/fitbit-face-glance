@@ -9,7 +9,11 @@ let myMins = $("minutes");
 let mySecs = $("seconds");
 let minTicks = $("m_ticks");
 let bg = $("bg");
+
 let battery_percent = $("battery_percent");
+let battery_gauge = $("battery_gauge")
+let battery_gauge_bg = $("battery_gauge_bg")
+let battery_gauge_width = battery_gauge_bg.x2 - battery_gauge_bg.x1 + 1;
 
 function $(s) {
   return document.getElementById(s);
@@ -26,7 +30,8 @@ function onTick(now) {
   myMins.groupTransform.rotate.angle = mins*6;
   mySecs.groupTransform.rotate.angle = secs*6;
 
-  battery_percent.text = battery.chargeLevel + "%"
+  battery_percent.text = battery.chargeLevel + "%";
+  battery_gauge.x2 = battery_gauge.x1 + battery_gauge_width / 100 * battery.chargeLevel;
 }
 
 function setAOD(on) {
