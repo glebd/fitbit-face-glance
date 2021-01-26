@@ -109,6 +109,7 @@
   <text id="hour07" class="hLabel">7</text>
   <text id="hour08" class="hLabel">8</text>
   <text id="hour09" class="hLabel">9</text>
+  <text id="hour10" class="hLabel">10</text>
   <!-- Hour hand -->
   <g id="hours" transform="translate(50%,50%)">
     <use href="#h_hand" fill="white" />
