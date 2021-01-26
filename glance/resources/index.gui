@@ -96,7 +96,6 @@
   <g transform="translate(50%,50%)">
     <use href="#h_ticks" fill="white" />
     <use href="#m_ticks" fill="white" opacity="0.75" />
-    <use href="#axis" />
   </g>
   <!-- Hour labels -->
   <text id="hour12" class="hLabel">12</text>
