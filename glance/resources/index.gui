@@ -119,6 +119,10 @@
   <g id="minutes" transform="translate(50%,50%)" fill="white">
     <use href="#m_hand" fill="inherit" />
   </g>
+  <!-- Axis -->
+  <g transform="translate(50%,50%)">
+    <use href="#axis" />
+  </g>
   <!-- Second hand -->
   <g id="seconds" transform="translate(50%,50%)">
     <line x1="0" y1="8%" x2="0" y2="-48%+3" stroke-width="3" fill="red" />
