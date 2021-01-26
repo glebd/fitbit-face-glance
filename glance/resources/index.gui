@@ -88,6 +88,12 @@
       <line x1="0" y1="-4" x2="0" y2="-18" stroke-width="3" fill="inherit" />
       <line x1="0" y1="-18" x2="0" y2="-29%+4" stroke-width="5" fill="black" />
     </symbol>
+    <symbol id="battery_with_level">
+      <g>
+        <text id="battery_percent" x="15" y="0" />
+        <rect id="battery_gauge" x="0" y="2" width="30" height="10" rx="2" ry="2" />
+      </g>
+    </symbol>
   </defs>
   <!-- Background -->
   <g id="bg">
@@ -129,7 +135,7 @@
     <line x1="0" y1="8%" x2="0" y2="-48%+3" stroke-width="3" fill="red" />
   </g>
   <!-- Battery -->
-  <g id="compl_battery" transform="translate(9%,42%)">
-    <text id="battery_percent"></text>
+  <g id="compl_battery" transform="translate(3%+1,91%)">
+    <use href="#battery_with_level" />
   </g>
 </svg>

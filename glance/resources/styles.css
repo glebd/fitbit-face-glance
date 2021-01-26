@@ -38,3 +38,9 @@ line {
   text-anchor: middle;
   text-length: 4;
 }
+
+#battery_gauge {
+  fill: green;
+  stroke: red;
+  stroke-width: 1;
+}
