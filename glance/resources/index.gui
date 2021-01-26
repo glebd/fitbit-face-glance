@@ -90,8 +90,8 @@
     </symbol>
   </defs>
   <!-- Background -->
-  <circle fill="#0b4058" id="outer_circle" cx="150" cy="150" r="145" />
-  <circle fill="#000000" id="inner_circle" cx="150" cy="150" r="103" />
+  <circle id="bg_outer" cx="150" cy="150" r="145" />
+  <circle id="bg_inner" cx="150" cy="150" r="103" />
   <!-- Ticks -->
   <g transform="translate(50%,50%)">
     <use href="#h_ticks" fill="white" />

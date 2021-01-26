@@ -27,3 +27,6 @@ line {
 #hour09 {x: 11%; y: 52%;}
 #hour10 {x: 16%+1; y: 32%+1;}
 #hour11 {x: 30%+2; y: 18%;}
+
+#bg_outer {fill: #10334b;}
+#bg_inner {fill: "black";}
