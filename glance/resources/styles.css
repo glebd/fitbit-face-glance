@@ -34,13 +34,9 @@ line {
 #battery_percent {
   font-family: Fabrikat-Black;
   font-size: 14;
-  fill: green;
   text-anchor: middle;
   text-length: 4;
 }
 
 #battery_gauge {
-  fill: green;
-  stroke: red;
-  stroke-width: 1;
 }

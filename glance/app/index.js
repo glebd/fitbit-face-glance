@@ -11,9 +11,10 @@ let minTicks = $("m_ticks");
 let bg = $("bg");
 
 let battery_percent = $("battery_percent");
-let battery_gauge = $("battery_gauge")
-let battery_gauge_bg = $("battery_gauge_bg")
-let battery_gauge_width = battery_gauge_bg.x2 - battery_gauge_bg.x1 + 1;
+let battery_gauge = $("battery_gauge");
+let battery_gauge_bg = $("battery_gauge_bg");
+let battery_gauge_width = battery_gauge_bg.x2 - battery_gauge_bg.x1;
+let compl_battery = $("compl_battery");
 
 function $(s) {
   return document.getElementById(s);
@@ -31,7 +32,18 @@ function onTick(now) {
   mySecs.groupTransform.rotate.angle = secs*6;
 
   battery_percent.text = battery.chargeLevel + "%";
-  battery_gauge.x2 = battery_gauge.x1 + battery_gauge_width / 100 * battery.chargeLevel;
+  let battery_delta = Math.round(battery_gauge_width * battery.chargeLevel / 100.0);
+  battery_gauge.x2 = battery_gauge.x1 + battery_delta;
+  if (battery.chargeLevel > 25) {
+    battery_percent.style.fill = "green";
+    battery_gauge.style.fill = "green";
+  } else if (battery.chargeLevel > 16) {
+    battery_percent.style.fill = "orange";
+    battery_gauge.style.fill = "orange";
+  } else {
+    battery_percent.style.fill = "red";
+    battery_gauge.style.fill = "red";
+  }
 }
 
 function setAOD(on) {
