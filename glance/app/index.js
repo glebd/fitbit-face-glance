@@ -4,6 +4,9 @@ import {display} from "display";
 import {me} from "appbit";
 import {battery} from "power";
 
+let weekdays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+let months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
 let myHours = $("hours");
 let myMins = $("minutes");
 let mySecs = $("seconds");
@@ -15,9 +18,16 @@ let battery_gauge = $("battery_gauge");
 let battery_gauge_bg = $("battery_gauge_bg");
 let battery_gauge_width = battery_gauge_bg.x2 - battery_gauge_bg.x1;
 let compl_battery = $("compl_battery");
+let weekday_widget = $("weekday");
+let date_widget = $("date");
+let month_widget = $("month");
 
 function $(s) {
   return document.getElementById(s);
+}
+
+function pad(n) {
+  return n < 10 ? "0" + n : n;
 }
 
 function onTick(now) {
@@ -30,6 +40,14 @@ function onTick(now) {
   myHours.groupTransform.rotate.angle = (hours + mins/60)*30;
   myMins.groupTransform.rotate.angle = mins*6;
   mySecs.groupTransform.rotate.angle = secs*6;
+
+  let weekday = weekdays[now.getDay()];
+  let date = now.getDate();
+  let month = now.getMonth();
+  let month_name = months[month];
+  weekday_widget.text = weekday;
+  date_widget.text = pad(date);
+  month_widget.text = month_name;
 
   battery_percent.text = battery.chargeLevel + "%";
   let battery_delta = Math.round(battery_gauge_width * battery.chargeLevel / 100.0);

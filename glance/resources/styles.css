@@ -40,3 +40,27 @@ line {
 
 #battery_gauge {
 }
+
+#weekday {
+  font-family: Colfax-Bold;
+  font-size: 17;
+  text-anchor: middle;
+  text-length: 3;
+  fill: "red";
+}
+
+#date {
+  font-family: Colfax;
+  font-size: 30;
+  text-anchor: middle;
+  text-length: 2;
+  fill: "white";
+}
+
+#month {
+  font-family: Colfax-Bold;
+  font-size: 17;
+  text-anchor: middle;
+  text-length: 3;
+  fill: "gray";
+}
