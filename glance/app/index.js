@@ -34,15 +34,18 @@ function onTick(now) {
   battery_percent.text = battery.chargeLevel + "%";
   let battery_delta = Math.round(battery_gauge_width * battery.chargeLevel / 100.0);
   battery_gauge.x2 = battery_gauge.x1 + battery_delta;
-  if (battery.chargeLevel > 25) {
+  if (battery.charging)
+    compl_battery.style.display = "none";
+  else if (battery.chargeLevel > 25) {
     battery_percent.style.fill = "green";
     battery_gauge.style.fill = "green";
+    compl_battery.style.display = "inline";
   } else if (battery.chargeLevel > 16) {
     battery_percent.style.fill = "orange";
     battery_gauge.style.fill = "orange";
+    compl_battery.style.display = "inline";
   } else {
-    battery_percent.style.fill = "red";
-    battery_gauge.style.fill = "red";
+    compl_battery.style.display = "none";
   }
 }
 
