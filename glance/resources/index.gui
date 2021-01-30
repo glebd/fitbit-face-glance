@@ -1,11 +1,13 @@
 <svg viewport-fill="black">
   <defs>
+
     <symbol id="h_tick">
       <g id="container">
         <line x1="0" y1="-45%-1" x2="0" y2="-48%+3" stroke-width="3" fill="inherit" />
         <line x1="0" y1="-47%-1" x2="0" y2="-45%+3" stroke-width="3" fill="inherit" />
       </g>
     </symbol>
+
     <symbol id="h_tick_quarter">
       <g id="container">
         <use href="#h_tick" fill="inherit" />
@@ -17,6 +19,7 @@
         </use>
       </g>
     </symbol>
+
     <symbol id="h_ticks">
       <use href="#h_tick_quarter" fill="inherit" />
       <use href="#h_tick_quarter" fill="inherit">
@@ -29,12 +32,14 @@
         <set href="container" attributeName="transform" to="rotate(270)" />
       </use>
     </symbol>
+
     <symbol id="m_tick">
       <g id="container">
         <line x1="0" y1="-46%" x2="0" y2="-48%+2" stroke-width="1" fill="inherit" />
         <line x1="0" y1="-46%" x2="0" y2="-46%+1" stroke-width="1" fill="inherit" />
       </g>
     </symbol>
+
     <symbol id="m_tick_5">
       <g id="container">
         <use href="#m_tick" fill="inherit">
@@ -51,6 +56,7 @@
         </use>
       </g>
     </symbol>
+
     <symbol id="m_tick_quarter">
       <g id="container">
         <use href="#m_tick_5" fill="inherit" />
@@ -62,6 +68,7 @@
         </use>
       </g>
     </symbol>
+
     <symbol id="m_ticks">
       <use href="#m_tick_quarter" fill="inherit" />
       <use href="#m_tick_quarter" fill="inherit">
@@ -74,20 +81,24 @@
         <set href="container" attributeName="transform" to="rotate(270)" />
       </use>
     </symbol>
+
     <symbol id="axis">
       <circle fill="white" cx="0" cy="0" r="6" />
       <circle fill="red" cx="0" cy="0" r="4" />
     </symbol>
+
     <symbol id="m_hand">
       <line x1="0" y1="-16" x2="0" y2="-46%+2" stroke-width="9" fill="inherit" />
       <line x1="0" y1="-4" x2="0" y2="-18" stroke-width="3" fill="inherit" />
       <line x1="0" y1="-18" x2="0" y2="-46%+4" stroke-width="5" fill="black" />
-      </symbol>
+    </symbol>
+
     <symbol id="h_hand">
       <line x1="0" y1="-16" x2="0" y2="-29%+2" stroke-width="9" fill="inherit" />
       <line x1="0" y1="-4" x2="0" y2="-18" stroke-width="3" fill="inherit" />
       <line x1="0" y1="-18" x2="0" y2="-29%+4" stroke-width="5" fill="black" />
     </symbol>
+
     <symbol id="battery_with_level">
       <g>
         <text id="battery_percent" x="20" y="0" fill="inherit" />
@@ -96,16 +107,19 @@
       </g>
     </symbol>
   </defs>
+
   <!-- Background -->
   <g id="bg">
     <circle id="bg_outer" cx="150" cy="150" r="145" />
     <circle id="bg_inner" cx="150" cy="150" r="103" />
   </g>
+
   <!-- Ticks -->
   <g transform="translate(50%,50%)">
     <use href="#h_ticks" fill="white" />
     <use href="#m_ticks" fill="white" opacity="0.75" />
   </g>
+
   <!-- Hour labels -->
   <text id="hour12" class="hLabel">12</text>
   <text id="hour01" class="hLabel">1</text>
@@ -123,20 +137,25 @@
   <g id="hours" transform="translate(50%,50%)">
     <use href="#h_hand" fill="white" />
   </g>
+
   <!-- Minute hand -->
   <g id="minutes" transform="translate(50%,50%)" fill="white">
     <use href="#m_hand" fill="inherit" />
   </g>
+
   <!-- Axis -->
   <g transform="translate(50%,50%)">
     <use href="#axis" />
   </g>
+
   <!-- Second hand -->
   <g id="seconds" transform="translate(50%,50%)">
     <line x1="0" y1="8%" x2="0" y2="-48%+3" stroke-width="3" fill="red" />
   </g>
+
   <!-- Battery -->
   <g id="compl_battery" transform="translate(3%,7%)">
     <use href="#battery_with_level" fill="inherit" />
   </g>
+
 </svg>
