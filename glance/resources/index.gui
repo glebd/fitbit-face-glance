@@ -172,4 +172,7 @@
     <use href="#battery_with_level" fill="inherit" />
   </g>
 
+  <!-- Battery arc (upper left) -->
+  <arc id="batt_arc" fill="green" x="-6" y="-6" width="312" height="312" arc-width="6" start-angle="300" sweep-angle="30" />
+
 </svg>

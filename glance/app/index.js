@@ -3,6 +3,7 @@ import document from "document";
 import {display} from "display";
 import {me} from "appbit";
 import {battery} from "power";
+import {HeartRateSensor} from "heart-rate";
 
 let weekdays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 let months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
@@ -29,6 +30,36 @@ function $(s) {
 function pad(n) {
   return n < 10 ? "0" + n : n;
 }
+
+function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+  var angleInRadians = (angleInDegrees-90) * Math.PI / 180.0;
+  return {
+    x: centerX + (radius * Math.cos(angleInRadians)),
+    y: centerY + (radius * Math.sin(angleInRadians))
+  };
+}
+
+function describeArc(x, y, radius, startAngle, endAngle){
+
+    var start = polarToCartesian(x, y, radius, endAngle);
+    var end = polarToCartesian(x, y, radius, startAngle);
+
+    var largeArcFlag = "0";
+    if (endAngle >= startAngle) {
+      largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+    } else {
+      largeArcFlag = (endAngle + 360.0) - startAngle <= 180 ? "0" : "1";
+    }
+
+    var d = [
+        "M", start.x, start.y,
+        "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
+    ].join(" ");
+
+    return d;
+}
+
+//let hr_arc = $("hr_arc").setAttribute("d", describeArc(150, 150, 100, 0, 270));
 
 function onTick(now) {
   now = (now && now.date) || new Date();
