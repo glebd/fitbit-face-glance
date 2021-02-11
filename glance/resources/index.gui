@@ -107,6 +107,16 @@
       </g>
     </symbol>
 
+    <symbol id="battery_complication">
+      <g id="container">
+        <!-- Battery percentage -->
+        <text id="battery_percent" x="50%" y="-10" fill="inherit" />
+        <!-- Battery arc -->
+        <arc id="battery_arc_bg" fill="green" x="-6" y="-6" width="312" height="312" arc-width="6" start-angle="-15" sweep-angle="30" />
+        <!--<circle fill="yellow" cx="50%" cy="50%" r="156" opacity="0.2" />-->
+      </g>
+    </symbol>
+
     <symbol id="date">
       <g>
         <text id="weekday" x="0" y="0" />
@@ -168,11 +178,10 @@
   </g>
 
   <!-- Battery -->
-  <g id="compl_battery" transform="translate(3%,7%)">
-    <use href="#battery_with_level" fill="inherit" />
+  <g id="compl_battery">
+    <use href="#battery_complication" fill="inherit">
+      <set href="container" attributeName="transform" to="translate(-25%+12,50%) rotate(-45)" />
+    </use>
   </g>
-
-  <!-- Battery arc (upper left) -->
-  <arc id="batt_arc" fill="green" x="-6" y="-6" width="312" height="312" arc-width="6" start-angle="300" sweep-angle="30" />
 
 </svg>
