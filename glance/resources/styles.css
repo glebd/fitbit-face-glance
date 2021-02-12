@@ -32,13 +32,18 @@ line {
 #bg_inner {fill: "black";}
 
 #battery_percent {
-  font-family: Fabrikat-Black;
-  font-size: 18;
+  font-family: Colfax-Bold;
+  font-size: 20;
   text-anchor: middle;
   text-length: 4;
 }
 
-#battery_gauge {
+#battery_arc_bg {
+  fill: "#134022";
+}
+
+#battery_arg_fg {
+  fill: "#67e55d";
 }
 
 #weekday {

@@ -110,9 +110,10 @@
     <symbol id="battery_complication">
       <g id="container">
         <!-- Battery percentage -->
-        <text id="battery_percent" x="50%" y="-10" fill="inherit" />
+        <text id="battery_percent" x="50%" y="-14" fill="inherit" />
         <!-- Battery arc -->
-        <arc id="battery_arc_bg" fill="green" x="-6" y="-6" width="312" height="312" arc-width="6" start-angle="-15" sweep-angle="30" />
+        <arc id="battery_arc_bg" x="-8" y="-8" width="316" height="316" arc-width="8" start-angle="-15" sweep-angle="30" />
+        <arc id="battery_arc_fg" x="-8" y="-8" width="316" height="316" arc-width="8" start-angle="-15" sweep-angle="0" />
         <!--<circle fill="yellow" cx="50%" cy="50%" r="156" opacity="0.2" />-->
       </g>
     </symbol>

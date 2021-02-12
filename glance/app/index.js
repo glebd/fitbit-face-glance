@@ -15,10 +15,11 @@ let minTicks = $("m_ticks");
 let bg = $("bg");
 
 let battery_percent = $("battery_percent");
-//let battery_gauge = $("battery_gauge");
-//let battery_gauge_bg = $("battery_arc_bg");
-//let battery_gauge_width = battery_gauge_bg.sweep_angle;
+let battery_gauge_bg = $("battery_arc_bg");
+let battery_gauge_fg = $("battery_arc_fg");
+let battery_gauge_width = battery_gauge_bg.sweepAngle;
 let compl_battery = $("compl_battery");
+
 let weekday_widget = $("weekday");
 let date_widget = $("date");
 let month_widget = $("month");
@@ -81,17 +82,17 @@ function onTick(now) {
   month_widget.text = month_name;
 
   battery_percent.text = battery.chargeLevel + "%";
-  //let battery_delta = Math.round(battery_gauge_width * battery.chargeLevel / 100.0);
-  //battery_gauge.x2 = battery_gauge.x1 + battery_delta;
+  let battery_delta = Math.round(battery_gauge_width * battery.chargeLevel / 100.0);
+  battery_gauge_fg.sweepAngle = battery_delta;
   if (battery.charging)
     compl_battery.style.display = "none";
   else if (battery.chargeLevel > 25) {
     battery_percent.style.fill = "green";
-    //battery_gauge.style.fill = "green";
+    battery_gauge_fg.style.fill = "green";
     compl_battery.style.display = "inline";
   } else if (battery.chargeLevel > 16) {
     battery_percent.style.fill = "orange";
-    //battery_gauge.style.fill = "orange";
+    battery_gauge_fg.style.fill = "orange";
     compl_battery.style.display = "inline";
   } else {
     compl_battery.style.display = "none";
