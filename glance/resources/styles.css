@@ -39,11 +39,11 @@ line {
 }
 
 #battery_arc_bg {
-  fill: "#134022";
+  fill: "fb-green-press";
 }
 
 #battery_arg_fg {
-  fill: "#67e55d";
+  fill: "fb-mint";
 }
 
 #weekday {
