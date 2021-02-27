@@ -125,6 +125,12 @@
         <text id="month" x="0" y="44" />
       </g>
     </symbol>
+    
+    <symbol id="circles">
+      <g id="container_circles">
+        <arc id="arc_steps" x="0" y="0" width="64" height="64" arc-width="7" start-angle="0" sweep-angle="360" fill="red" />
+      </g>
+    </symbol>
   </defs>
 
   <!-- Background -->
@@ -156,6 +162,13 @@
   <!-- Date -->
   <g id="compl_date" transform="translate(50%,26%)">
     <use href="#date" />
+  </g>
+  
+  <!-- Circles -->
+  <g id="compl_circles">
+    <use href="#circles">
+      <set href="container_circles" attributeName="transform" to="translate(57%,50%-32)" />
+    </use>
   </g>
 
   <!-- Hour hand -->
